@@ -39,7 +39,9 @@ interface EosCreator {
 export { EosdtConnector } from "./connector";
 export { PositionsContract } from "./positions";
 export { BalanceGetter } from "./balance";
+export { GovernanceContract } from "./governance";
 export * from "./interfaces/positions-contract";
 export * from "./interfaces/connector";
+export * from "./interfaces/governance";
 declare const Eos: EosCreator;
 export { Eos };

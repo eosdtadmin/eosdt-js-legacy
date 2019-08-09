@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const _1 = require("./");
 const positions_1 = require("./positions");
 const balance_1 = require("./balance");
+const governance_1 = require("./governance");
 class EosdtConnector {
     constructor(nodeAddress, privateKeys) {
         this.eos = _1.Eos({
@@ -16,6 +17,9 @@ class EosdtConnector {
     }
     getBalances() {
         return new balance_1.BalanceGetter(this);
+    }
+    getGovernance() {
+        return new governance_1.GovernanceContract(this);
     }
 }
 exports.EosdtConnector = EosdtConnector;

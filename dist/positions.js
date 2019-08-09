@@ -212,7 +212,7 @@ class PositionsContract {
     }
     getRates() {
         return __awaiter(this, void 0, void 0, function* () {
-            const table = yield this.eos.getTableRows(true, "eosdtorclize", "eosdtorclize", "oracle.rates", "rate", "0", "-1", 500);
+            const table = yield this.eos.getTableRows(true, "eosdtorclize", "eosdtorclize", "orarates", "rate", "0", "-1", 500);
             return table.rows;
         });
     }

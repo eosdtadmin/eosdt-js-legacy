@@ -279,7 +279,7 @@ export class PositionsContract {
             true,
             "eosdtorclize",
             "eosdtorclize",
-            "oracle.rates",
+            "orarates",
             "rate",
             "0",
             "-1",

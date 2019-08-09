@@ -10,5 +10,7 @@ var positions_1 = require("./positions");
 exports.PositionsContract = positions_1.PositionsContract;
 var balance_1 = require("./balance");
 exports.BalanceGetter = balance_1.BalanceGetter;
+var governance_1 = require("./governance");
+exports.GovernanceContract = governance_1.GovernanceContract;
 const Eos = eosjs_1.default;
 exports.Eos = Eos;

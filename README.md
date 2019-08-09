@@ -51,6 +51,18 @@ Module to manage EOSDT positions. Methods:
 -   `getParameters` - returns Positions contract parameters.
 -   `getSettings` - return Positions contract settings.
 
+### Governance
+
+Governance methods help manage the system: create proposals to change system parameters, vote on them and stake NUT tokens for voting. Methods:
+
+-   `stake` - sends NUT tokens to contract, staking them and allowing to vote on proposals.
+-   `unstake` - unstakes NUT tokens, returning them to user and lowering amount of available votes.
+-   `getSettings` - returns governance contract settings.
+-   `getVotes` - returns an array with all votes (up to 1000).
+-   `getVoterInfo` - returns amount of staked EOS and unstake date for specified voter.
+-   `voteForBlockProducers` - voting with staked NUTs for specified block producers.
+-   `getBpVotes` - returns array of block producers names and amount of NUT votes for them.
+
 ### Balances
 
 Module to get user's balances of EOSDT, EOS and NUT. Methods:
@@ -142,6 +154,20 @@ await positions.delete(accountName, positionId)
 updatedPosition = await positions.getPositionById(positionId)
 console.log("Position deleted, excess EOS returned to user, position must now be undefined: ",
   updatedPosition)
+```
+
+### Voting
+
+Staking NUT tokens to vote for and against block producers.
+
+```Javascript
+// Transfering 2 NUT tokens to use them in voting. Tokens can be unstaked and
+// transferred back after 3 days wait period (votes, using these tokens must be
+// cancelled first)
+await governance.stake(accountName, 2)
+
+// Unstaking NUT tokens to get them back on user's balance
+await governance.unstake(2, accountName)
 ```
 
 ### Balances operations

@@ -2,6 +2,7 @@ import { Eos } from "./"
 import { TextDecoder, TextEncoder } from "text-encoding"
 import { PositionsContract } from "./positions"
 import { BalanceGetter } from "./balance"
+import { GovernanceContract } from "./governance"
 
 export class EosdtConnector {
     public readonly eos: ReturnType<typeof Eos>
@@ -20,5 +21,9 @@ export class EosdtConnector {
 
     public getBalances(): BalanceGetter {
         return new BalanceGetter(this)
+    }
+
+    public getGovernance(): GovernanceContract {
+        return new GovernanceContract(this)
     }
 }

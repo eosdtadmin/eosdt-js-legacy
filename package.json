@@ -1,6 +1,6 @@
 {
   "name": "@eosdt/eosdt-js-legacy",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "JS library to execute EOSDT contracts methods using eosjs@16.0.9",
   "main": "./dist/index.js",
   "scripts": {
@@ -22,13 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/equilibrium-eosdt/eosdt-js-legacy.git"
+    "url": "https://github.com/equilibrium-eosdt/eosdt-js-legacy"
   },
-  "homepage": "https://github.com/equilibrium-eosdt/eosdt-js-legacy#readme",
-  "bugs": {
-    "url": "https://github.com/equilibrium-eosdt/eosdt-js-legacy/issues"
-  },
-  "directories": {
-    "example": "examples"
-  }
+  "homepage": "https://github.com/equilibrium-eosdt/eosdt-js-legacy#readme"
 }

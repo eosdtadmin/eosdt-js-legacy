@@ -32,7 +32,10 @@ interface EosJS {
         key_type?: string,
         index_position?: string
     ) => any
-    transaction: (tx: TX, options: { authorization: string[], sign: boolean, broadcast: boolean }) => any
+    transaction: (
+        tx: TX,
+        options: { authorization: string[]; sign: boolean; broadcast: boolean }
+    ) => any
 }
 
 interface EosConfig {
@@ -52,8 +55,10 @@ interface EosCreator {
 export { EosdtConnector } from "./connector"
 export { PositionsContract } from "./positions"
 export { BalanceGetter } from "./balance"
+export { GovernanceContract } from "./governance"
 export * from "./interfaces/positions-contract"
 export * from "./interfaces/connector"
+export * from "./interfaces/governance"
 
 const Eos: EosCreator = EosLegacy
 export { Eos }
