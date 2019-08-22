@@ -7,7 +7,8 @@ import {
     GovernanceSettings,
     EosdtVote,
     BPVotes,
-    VoterInfo
+    VoterInfo,
+    ProxyVoters
 } from "./interfaces/governance"
 
 export class GovernanceContract {
@@ -201,6 +202,20 @@ export class GovernanceContract {
             "producer",
             "0",
             "-1"
+        )
+        return table.rows
+    }
+
+    public async getProxyVotes(): Promise<ProxyVoters> {
+        const table = await this.eos.getTableRows(
+            true,
+            "eosio",
+            "eosio",
+            "voters",
+            "eosdtbpproxy",
+            "eosdtbpproxy",
+            "",
+            1
         )
         return table.rows
     }

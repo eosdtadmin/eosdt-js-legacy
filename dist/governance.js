@@ -140,5 +140,11 @@ class GovernanceContract {
             return table.rows;
         });
     }
+    getProxyVotes() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const table = yield this.eos.getTableRows(true, "eosio", "eosio", "voters", "eosdtbpproxy", "eosdtbpproxy", "", 1);
+            return table.rows;
+        });
+    }
 }
 exports.GovernanceContract = GovernanceContract;

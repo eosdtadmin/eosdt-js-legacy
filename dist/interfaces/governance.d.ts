@@ -29,3 +29,15 @@ export interface VoterInfo {
     voting_amount: string;
     withdrawal_date: string;
 }
+export interface ProxyVoters {
+    flags1: number;
+    is_proxy: number;
+    last_vote_weight: string;
+    owner: string;
+    producers: string[];
+    proxied_vote_weight: string;
+    proxy: string;
+    reserved2: number;
+    reserved3: string;
+    staked: number;
+}

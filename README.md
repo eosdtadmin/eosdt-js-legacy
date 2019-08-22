@@ -62,6 +62,7 @@ Governance methods help manage the system: create proposals to change system par
 -   `getVoterInfo` - returns amount of staked EOS and unstake date for specified voter.
 -   `voteForBlockProducers` - voting with staked NUTs for specified block producers.
 -   `getBpVotes` - returns array of block producers names and amount of NUT votes for them.
+-   `getProxyVotes` - returns an info on block producers the proxy is currently voting for.
 
 ### Balances
 

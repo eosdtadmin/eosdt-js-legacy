@@ -1,6 +1,6 @@
 import BigNumber from "bignumber.js";
 import { EosdtConnectorInterface } from "./interfaces/connector";
-import { GovernanceSettings, EosdtVote, BPVotes, VoterInfo } from "./interfaces/governance";
+import { GovernanceSettings, EosdtVote, BPVotes, VoterInfo, ProxyVoters } from "./interfaces/governance";
 export declare class GovernanceContract {
     private contractName;
     private eos;
@@ -14,4 +14,5 @@ export declare class GovernanceContract {
     getSettings(): Promise<GovernanceSettings>;
     getVotes(): Promise<EosdtVote[]>;
     getBpVotes(): Promise<BPVotes[]>;
+    getProxyVotes(): Promise<ProxyVoters>;
 }
