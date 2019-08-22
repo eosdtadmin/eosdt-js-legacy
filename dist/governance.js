@@ -42,9 +42,10 @@ class GovernanceContract {
             return receipt;
         });
     }
-    stakeAndVote(sender, amount, producers) {
+    stakeAndVoteForBlockProducers(sender, amount, producers) {
         return __awaiter(this, void 0, void 0, function* () {
             amount = utils_1.toBigNumber(amount);
+            const voter = sender;
             const vote_json = JSON.stringify({ "eosdtbpproxy.producers": producers });
             const receipt = yield this.eos.transaction({
                 actions: [
@@ -62,9 +63,9 @@ class GovernanceContract {
                     {
                         account: this.contractName,
                         name: "vote",
-                        authorization: [{ actor: sender, permission: "active" }],
+                        authorization: [{ actor: voter, permission: "active" }],
                         data: {
-                            sender,
+                            voter,
                             proposal_name: "blockproduce",
                             vote: 1,
                             vote_json
