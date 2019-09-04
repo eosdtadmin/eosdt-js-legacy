@@ -101,7 +101,7 @@ class GovernanceContract {
             return receipt;
         });
     }
-    voteForBlockProducers(voter, ...producers) {
+    voteForBlockProducers(voter, producers) {
         return __awaiter(this, void 0, void 0, function* () {
             const vote_json = JSON.stringify({ "eosdtbpproxy.producers": producers });
             const receipt = yield this.eos.transaction({

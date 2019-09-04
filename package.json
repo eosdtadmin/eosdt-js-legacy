@@ -1,6 +1,6 @@
 {
   "name": "@eosdt/eosdt-js-legacy",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "JS library to execute EOSDT contracts methods using eosjs@16.0.9",
   "main": "./dist/index.js",
   "scripts": {

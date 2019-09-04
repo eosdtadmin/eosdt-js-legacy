@@ -10,7 +10,7 @@ export declare class GovernanceContract {
     stakeAndVoteForBlockProducers(sender: string, amount: string | number | BigNumber, producers: string[]): Promise<any>;
     getVoterInfo(accountName: string): Promise<VoterInfo | undefined>;
     unstake(amount: string | number | BigNumber, voter: string): Promise<any>;
-    voteForBlockProducers(voter: string, ...producers: string[]): Promise<any>;
+    voteForBlockProducers(voter: string, producers: string[]): Promise<any>;
     getSettings(): Promise<GovernanceSettings>;
     getVotes(): Promise<EosdtVote[]>;
     getBpVotes(): Promise<BPVotes[]>;

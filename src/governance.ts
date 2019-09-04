@@ -141,7 +141,7 @@ export class GovernanceContract {
 
     public async voteForBlockProducers(
         voter: string,
-        ...producers: string[]
+        producers: string[]
     ): Promise<any> {
         const vote_json = JSON.stringify({ "eosdtbpproxy.producers": producers })
         const receipt = await this.eos.transaction(
